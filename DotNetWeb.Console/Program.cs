@@ -14,6 +14,7 @@ namespace DotNetWeb.Console
             var scanner = new Scanner(input);
             var parser = new Parser.Parser(scanner);
             parser.Parse();
+            System.Console.WriteLine("Success!");
         }
     }
 }
