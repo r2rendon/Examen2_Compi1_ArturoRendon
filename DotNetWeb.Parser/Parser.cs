@@ -39,6 +39,7 @@ namespace DotNetWeb.Parser
         {
             Tag();
             InnerTemplate();
+            return null;
         }
         
         private void InnerTemplate()
@@ -84,7 +85,6 @@ namespace DotNetWeb.Parser
                     return IfStmt();
                 case TokenType.Hyphen:
                     return ForeachStatement();
-                    break;
                 default:
                     throw new ApplicationException("Unrecognized statement");
             }
@@ -262,6 +262,7 @@ namespace DotNetWeb.Parser
 
                 Assignations();
             }
+            return null;
         }
 
         private Statement Assignation(Id id)
